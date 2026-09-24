@@ -77,3 +77,20 @@ function showMessage() {
 }
 
 messageButton.addEventListener("click", showMessage);
+
+function restoreTodayState() {
+  const today = getTodayKey();
+
+  const savedDate = localStorage.getItem("messageDate");
+  const savedMessage = localStorage.getItem("dailyMessage");
+
+  if (savedDate === today && savedMessage) {
+    dailyMessage.textContent = savedMessage;
+    messageBox.classList.remove("hidden");
+
+    messageButton.textContent = "You already opened today’s message";
+    messageButton.classList.add("opened");
+  }
+}
+
+restoreTodayState();
