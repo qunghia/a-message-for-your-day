@@ -25,23 +25,45 @@ function getTodayKey() {
   return `${year}-${month}-${day}`;
 }
 
+function getRandomMessage(previousMessage) {
+  let availableMessages = messages.filter(
+    message => message !== previousMessage
+  );
+
+  if (availableMessages.length === 0) {
+    availableMessages = messages;
+  }
+
+  const randomIndex = Math.floor(
+    Math.random() * availableMessages.length
+  );
+
+  return availableMessages[randomIndex];
+}
+
 function getMessageForToday() {
   const today = getTodayKey();
 
   const savedDate = localStorage.getItem("messageDate");
   const savedMessage = localStorage.getItem("dailyMessage");
+  const previousMessage = localStorage.getItem("previousMessage");
 
   if (savedDate === today && savedMessage) {
     return savedMessage;
   }
 
-  const randomMessage =
-    messages[Math.floor(Math.random() * messages.length)];
+  if (savedMessage) {
+    localStorage.setItem("previousMessage", savedMessage);
+  }
+
+  const lastMessage = savedMessage || previousMessage;
+
+  const newMessage = getRandomMessage(lastMessage);
 
   localStorage.setItem("messageDate", today);
-  localStorage.setItem("dailyMessage", randomMessage);
+  localStorage.setItem("dailyMessage", newMessage);
 
-  return randomMessage;
+  return newMessage;
 }
 
 function showMessage() {
