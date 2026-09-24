@@ -91,6 +91,18 @@ button:active {
   transform: scale(0.97);
 }
 
+button.opened {
+  background: #dfe7dc;
+  color: #536153;
+  cursor: default;
+  box-shadow: none;
+}
+
+button.opened:hover {
+  transform: none;
+  background: #dfe7dc;
+}
+
 .message-box {
   position: relative;
   margin-top: 32px;
