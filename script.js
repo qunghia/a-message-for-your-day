@@ -72,7 +72,8 @@ function showMessage() {
   dailyMessage.textContent = message;
   messageBox.classList.remove("hidden");
 
-  messageButton.textContent = "Today’s message is already yours";
+  messageButton.textContent = "You already opened today’s message";
+  messageButton.classList.add("opened");
 }
 
 messageButton.addEventListener("click", showMessage);
