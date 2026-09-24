@@ -25,18 +25,20 @@ body {
 .message-card {
   width: 100%;
   max-width: 560px;
-  background: rgba(255, 255, 255, 0.78);
+
+  background: rgba(255, 255, 255, 0.88);
+
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 
-  border: 1px solid rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 28px;
 
   padding: 48px 34px;
   text-align: center;
 
   box-shadow:
-    0 20px 60px rgba(55, 75, 50, 0.12);
+    0 20px 60px rgba(0, 0, 0, 0.10);
 }
 
 .eyebrow {
@@ -44,7 +46,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 16px;
-  color: #788678;
+  color: #888888;
 }
 
 h1 {
@@ -60,19 +62,20 @@ h1 {
   margin: 0 auto 32px;
   line-height: 1.6;
   font-size: 16px;
-  color: #637063;
+  color: #666666;
 }
 
 button {
   border: none;
-  background: #324b36;
-  color: white;
+  background: #111111;
+  color: #ffffff;
 
   padding: 15px 24px;
   border-radius: 999px;
 
   font-size: 16px;
   cursor: pointer;
+
   -webkit-tap-highlight-color: transparent;
 
   transition:
@@ -83,8 +86,8 @@ button {
 
 button:hover {
   transform: translateY(-2px);
-  background: #263e2b;
-  box-shadow: 0 10px 24px rgba(50, 75, 54, 0.2);
+  background: #2a2a2a;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
 }
 
 button:active {
@@ -92,15 +95,15 @@ button:active {
 }
 
 button.opened {
-  background: #dfe7dc;
-  color: #536153;
+  background: #e7e7e7;
+  color: #555555;
   cursor: default;
   box-shadow: none;
 }
 
 button.opened:hover {
   transform: none;
-  background: #dfe7dc;
+  background: #e7e7e7;
 }
 
 .message-box {
@@ -108,14 +111,15 @@ button.opened:hover {
   margin-top: 32px;
   padding: 32px 24px;
 
-  background: rgba(246, 244, 233, 0.92);
-  border: 1px solid rgba(50, 75, 54, 0.08);
+  background: #fafafa;
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 24px;
 
   overflow: hidden;
 
   box-shadow:
-    0 12px 30px rgba(50, 75, 54, 0.08);
+    0 12px 30px rgba(0, 0, 0, 0.06);
 
   animation: messageReveal 0.65s cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -127,6 +131,7 @@ button.opened:hover {
   right: 18px;
 
   font-size: 16px;
+  color: #555555;
   opacity: 0.28;
 
   animation: sparkleFloat 2.5s ease-in-out infinite;
