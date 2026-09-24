@@ -11,6 +11,7 @@ body {
     radial-gradient(circle at top left, rgba(255, 255, 255, 0.5), transparent 35%),
     linear-gradient(135deg, #dfead7, #f5f1df);
   color: #263326;
+  overflow-x: hidden;
 }
 
 .page {
@@ -72,6 +73,7 @@ button {
 
   font-size: 16px;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 
   transition:
     transform 0.2s ease,
