@@ -85,10 +85,9 @@ function restoreTodayState() {
   const savedMessage = localStorage.getItem("dailyMessage");
 
   if (savedDate === today && savedMessage) {
-    dailyMessage.textContent = savedMessage;
-    messageBox.classList.remove("hidden");
+    messageBox.classList.add("hidden");
 
-    messageButton.textContent = "You already opened today’s message";
+    messageButton.textContent = "Open today’s message again";
     messageButton.classList.add("opened");
   }
 }
